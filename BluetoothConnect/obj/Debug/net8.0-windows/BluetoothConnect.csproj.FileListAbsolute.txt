@@ -29,3 +29,4 @@ C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\Views\Settings.g.cs
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\Views\AddDevice.baml
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\Views\Settings.baml
+C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\App.baml

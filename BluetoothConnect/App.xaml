@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:BluetoothConnect"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style x:Key="Header" TargetType="TextBlock" />
     </Application.Resources>
 </Application>

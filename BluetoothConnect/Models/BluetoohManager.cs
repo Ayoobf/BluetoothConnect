@@ -22,6 +22,7 @@ public class BluetoothManager
             foreach (var deviceInfo in deviceInfos)
             {
                 devices.Add(new BluetoothDevice(
+                    type: deviceInfo.ClassOfDevice.ToString(),
                     name: deviceInfo.DeviceName,
                     address: deviceInfo.DeviceAddress.ToString(),
                     connectionStatus: deviceInfo.Connected
@@ -31,7 +32,7 @@ public class BluetoothManager
         });
     }
 
-    public async Task ConnectToDevice(BluetoothDevice bluetoothDevice)
+    public async Task ConnectToDevice(BluetoothDevice? bluetoothDevice)
     {
 
         await Task.Run(() =>
