@@ -11,10 +11,19 @@ public partial class BluetoothHomePage : UserControl
         InitializeComponent();
     }
 
-    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
     {
-        var md = new BluetoohManager();
-        var list = md.GetAvailibleDevices();
-        Console.WriteLine(list);
+        await LoadDevices();
     }
+
+    private async Task LoadDevices()
+    {
+        var md = new BluetoothManager();
+        var list = await md.GetAvailibleDevices();
+        foreach (var device in list)
+        {
+            Console.WriteLine(device.Name);
+        }
+    }
+
 }
