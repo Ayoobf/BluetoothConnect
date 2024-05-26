@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "32feet.NET/3.5.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net/InTheHand.Net.Personal.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net/InTheHand.Net.Personal.dll": {
+            "related": ".XML"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "32feet.NET/3.5.0.3": {
+      "sha512": "iMLyRpcr6+SOr68nVxvu22xvIHoCI+DaDIZJ+lXWxSPI1o4kXj3NnS6cvaOB26RG1SwswAGFoPOm/wZ3FRAjvQ==",
+      "type": "package",
+      "path": "32feet.net/3.5.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "32feet.net.3.5.0.3.nupkg.sha512",
+        "32feet.net.nuspec",
+        "lib/net-cf/InTheHand.Net.Personal.XML",
+        "lib/net-cf/InTheHand.Net.Personal.dll",
+        "lib/net/InTheHand.Net.Personal.XML",
+        "lib/net/InTheHand.Net.Personal.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "32feet.NET >= 3.5.0.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\rfloo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\rfloo\\RiderProjects\\BluetoothConnect\\BluetoothConnect\\BluetoothConnect.csproj",
+      "projectName": "BluetoothConnect",
+      "projectPath": "C:\\Users\\rfloo\\RiderProjects\\BluetoothConnect\\BluetoothConnect\\BluetoothConnect.csproj",
+      "packagesPath": "C:\\Users\\rfloo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rfloo\\RiderProjects\\BluetoothConnect\\BluetoothConnect\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\rfloo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "32feet.NET": {
+            "target": "Package",
+            "version": "[3.5.0.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package '32feet.NET 3.5.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "32feet.NET",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}
