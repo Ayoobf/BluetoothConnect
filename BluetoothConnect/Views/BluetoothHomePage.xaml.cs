@@ -8,8 +8,5 @@ public partial class BluetoothHomePage : UserControl
     public BluetoothHomePage()
     {
         InitializeComponent();
-
     }
-
-
 }

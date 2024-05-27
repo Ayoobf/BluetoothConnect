@@ -26,9 +26,9 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="{Binding Type}" Foreground="#828282" Width="70" Height="24" FontSize="16" FontFamily="Inter" FontWeight="Medium" Margin="0 16 20 16"></TextBlock>
-                                <TextBlock Text="{Binding Name}" Width="522" Height="24" FontSize="16" FontFamily="Inter" FontWeight="Medium" Margin="0 16 490 16"></TextBlock>
-                                <!--<Button Content="Connect" Command="{Binding DataContext.ConnectCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                        CommandParameter="{Binding}" Width="86" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" Margin="5"/>-->
+                                <TextBlock Text="{Binding Name}" Width="240" Height="24" FontSize="16" FontFamily="Inter" FontWeight="Medium" Margin="0 16 0 16"></TextBlock>
+                                <Button Content="Connect" Command="{Binding ConnectCommand, Source={StaticResource HomePageViewModel}}"
+                                         CommandParameter="{Binding}" Width="86" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" Margin="5"/>
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

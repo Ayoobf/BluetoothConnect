@@ -37,7 +37,7 @@ public class BluetoothManager
 
         await Task.Run(() =>
         {
-            var bluetoothAddress = BluetoothAddress.Parse(bluetoothDevice.Address);
+            var bluetoothAddress = BluetoothAddress.Parse(bluetoothDevice?.Address);
             var bluetoothEndPoint = new BluetoothEndPoint(bluetoothAddress, BluetoothService.SerialPort);
 
             Client.Connect(bluetoothEndPoint);
