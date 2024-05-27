@@ -5,17 +5,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:viewModels="clr-namespace:BluetoothConnect.ViewModels"
         mc:Ignorable="d"
-        Title="DeviceListView" Height="400" Width="450">
-    <StackPanel Orientation="Vertical" Margin="80 0 0 0 ">
+        Title=" "
+        ResizeMode="CanMinimize"
+        Height="200" Width="250">
+    <StackPanel Orientation="Vertical" Margin="0 0 0 0 ">
         <StackPanel.Resources>
             <viewModels:DeviceListViewModel x:Key="DeviceListViewModel" />
         </StackPanel.Resources>
+        <TextBlock FontSize="16" FontFamily="Sugoe" FontWeight="Medium" HorizontalAlignment="Center" Padding="5">Select AirPods</TextBlock>
         <ItemsControl ItemsSource="{Binding BluetoothDevices ,Source={StaticResource DeviceListViewModel}}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="Connect" Command="{Binding ConnectCommand, Source={StaticResource DeviceListViewModel}}"
-                                CommandParameter="{Binding}" Width="86" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" Margin="5"/>
+                    <StackPanel Orientation="Vertical">
+                        <Button Content="{Binding Name}" Command="{Binding SetAirPodsCommand, Source={StaticResource DeviceListViewModel}}"
+                                CommandParameter="{Binding}" Width="250" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" />
                     </StackPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

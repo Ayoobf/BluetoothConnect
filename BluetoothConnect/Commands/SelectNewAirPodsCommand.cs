@@ -1,6 +1,6 @@
 ﻿namespace BluetoothConnect.Commands;
 
-public class SelectAirPodsCommand: CommandBase
+public class SelectNewAirPodsCommand: CommandBase
 {
     public override void Execute(object? parameter)
     {
