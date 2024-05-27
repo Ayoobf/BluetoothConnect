@@ -7,19 +7,6 @@
         xmlns:viewModels="clr-namespace:BluetoothConnect.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance viewModels:MainViewModel}">
-    <StackPanel Orientation="Horizontal">
-        <StackPanel Orientation="Vertical" Width="256" Background="AliceBlue">
-            <TextBlock FontSize="20" FontFamily="Inter" FontWeight="SemiBold" Padding="24 24 0 68">Bluetooth Connect</TextBlock>
-            <Button Background="#00000000" BorderBrush="#00000000" Width="240" Height="40" Command="{Binding HomeCommand}">
-                <TextBlock HorizontalAlignment="Left" Width="208" Height="24" FontSize="16" FontFamily="Inter" Padding="0 0 0 0 ">Home</TextBlock>
-            </Button>
-            <Button Background="#00000000" BorderBrush="#00000000" Width="240" Height="40" Command="{Binding AddDeviceCommand}">
-                <TextBlock HorizontalAlignment="Left" Width="208" Height="24" FontSize="16" FontFamily="Inter" Padding="0 0 0 0 ">Add Device</TextBlock>
-            </Button>
-            <Button Background="#00000000" BorderBrush="#00000000" Width="240" Height="40" Command="{Binding SettingsCommand}">
-                <TextBlock HorizontalAlignment="Left" Width="208" Height="24" FontSize="16" FontFamily="Inter" Padding="0 0 0 0 ">Settings</TextBlock>
-            </Button>
-        </StackPanel>
-        <views:BluetoothHomePage DataContext="{Binding CurrentViewModel}"></views:BluetoothHomePage>
-    </StackPanel>
+    <views:BluetoothHomePage DataContext="{Binding CurrentViewModel}"></views:BluetoothHomePage>
+
 </Window>
