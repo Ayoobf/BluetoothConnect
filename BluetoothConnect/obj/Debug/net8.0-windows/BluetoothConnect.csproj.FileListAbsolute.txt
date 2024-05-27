@@ -3,13 +3,11 @@ C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\bin\Debug\net8.0-
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\bin\Debug\net8.0-windows\BluetoothConnect.runtimeconfig.json
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\bin\Debug\net8.0-windows\BluetoothConnect.dll
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\bin\Debug\net8.0-windows\BluetoothConnect.pdb
-C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\Views\BluetoothHomePage.g.cs
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\BluetoothConnect_MarkupCompile.cache
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\BluetoothConnect_MarkupCompile.lref
-C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\Views\BluetoothHomePage.baml
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\BluetoothConnect.g.resources
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\BluetoothConnect.GeneratedMSBuildEditorConfig.editorconfig
@@ -30,3 +28,5 @@ C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\Views\AddDevice.baml
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\Views\Settings.baml
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\App.baml
+C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\MainWindow.baml

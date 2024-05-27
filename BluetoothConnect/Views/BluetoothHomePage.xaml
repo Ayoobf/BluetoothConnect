@@ -5,11 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewModels="clr-namespace:BluetoothConnect.ViewModels"
              mc:Ignorable="d"
-             d:DesignHeight="1080" d:DesignWidth="1440" d:DataContext="{d:DesignInstance viewModels:HomePageViewModel}">
+             d:DesignHeight="1080"
+             d:DesignWidth="1440" >
     <Grid>
         <StackPanel>
+            <StackPanel.Resources>
+                <viewModels:HomePageViewModel x:Key="HomePageViewModel" />
+            </StackPanel.Resources>
             <TextBlock FontSize="20" FontFamily="Inter" FontWeight="SemiBold" Padding="64 24 0 0">Home</TextBlock>
-            <ListView ItemsSource="{Binding}" SelectedItem="{Binding SelectedDevice}" Margin="30 0 0 0" BorderBrush="#00000000">
+            <ListView ItemsSource="{Binding BluetoothDevices ,Source={StaticResource HomePageViewModel}}" Margin="30 0 0 0" BorderBrush="#00000000">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -52,7 +56,8 @@
                             </GridViewColumn.HeaderTemplate>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock HorizontalAlignment="Left" Text="Hello" Padding="40 0 0 0 " Background="#00000000" FontSize="16"></TextBlock>
+                                    <TextBlock HorizontalAlignment="Left" Text="{Binding Name}" Padding="40 0 0 0 " Background="#00000000" FontSize="16"
+                                               d:DataContext="{d:DesignData BluetoothDeviceViewModel}"></TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -77,9 +82,6 @@
 
                     </GridView>
                 </ListView.View>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
 
             </ListView>
         </StackPanel>
