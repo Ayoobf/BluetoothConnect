@@ -14,13 +14,15 @@ public class HomePageViewModel : ViewModelBase
 
     public ConnectCommand ConnectCommand { get; }
     public AddCommand AddCommand { get; }
+    public AddDeviceCommand AddDeviceCommand { get; }
 
     public HomePageViewModel()
     {
         _storageService = new BluetoothStorageService();
         _bluetoothDevices = new ObservableCollection<BluetoothDeviceViewModel>();
        ConnectCommand = new ConnectCommand(new BluetoothManager());
-       AddCommand = new AddCommand();
+       AddCommand = new AddCommand(_bluetoothDevices);
+       AddDeviceCommand = new AddDeviceCommand(_bluetoothDevices);
        InitializeAsync();
     }
 
