@@ -24,7 +24,10 @@
                 <Image Source="/Resources/Airpods-Pro-PNG-Cutout.png" Opacity="100" Width="150" Height="150" HorizontalAlignment="Center" Margin="0,20,0,0" />
 
                 <!-- Connect Button -->
-                <Button Content="Connect" Width="200" Height="40" FontFamily="Segoe" FontWeight="Medium" Background="#E5E5EA" BorderBrush="#E5E5EA" BorderThickness="1" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Content="Connect" Command="{Binding ConnectAirPodsCommand, Source={StaticResource ConnectAirpodsViewModel}}"
+                        CommandParameter="{Binding}"
+                        Width="200" Height="40" FontFamily="Segoe"
+                        FontWeight="Medium" Background="#E5E5EA" BorderBrush="#E5E5EA" BorderThickness="1" HorizontalAlignment="Center" Margin="0,20,0,0">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>

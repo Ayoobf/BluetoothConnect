@@ -8,5 +8,6 @@
 
         <Style x:Key="Header" TargetType="TextBlock" />
         <viewModels:HomePageViewModel x:Key="HomePageViewModel" />
+        <viewModels:ConnectAirPodsViewModel x:Key="ConnectAirpodsViewModel" />
     </Application.Resources>
 </Application>
