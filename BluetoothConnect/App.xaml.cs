@@ -1,6 +1,6 @@
-﻿using System.Configuration;
-using System.Data;
+﻿
 using System.Windows;
+using BluetoothConnect.Models;
 
 namespace BluetoothConnect;
 
@@ -9,4 +9,10 @@ namespace BluetoothConnect;
 /// </summary>
 public partial class App : Application
 {
+    private readonly BluetoothManager _btManager;
+
+    public App()
+    {
+        _btManager = new BluetoothManager();
+    }
 }

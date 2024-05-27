@@ -1,4 +1,5 @@
 ﻿
+using System.Net.Sockets;
 using InTheHand.Net;
 using InTheHand.Net.Bluetooth;
 using InTheHand.Net.Sockets;
@@ -24,7 +25,7 @@ public class BluetoothManager
                 devices.Add(new BluetoothDevice(
                     type: deviceInfo.ClassOfDevice.ToString(),
                     name: deviceInfo.DeviceName,
-                    address: deviceInfo.DeviceAddress.ToString(),
+                    address: deviceInfo.DeviceAddress,
                     connectionStatus: deviceInfo.Connected
                     ));
             }
@@ -34,17 +35,30 @@ public class BluetoothManager
 
     public async Task ConnectToDevice(BluetoothDevice? bluetoothDevice)
     {
-
+        Console.WriteLine($"Connecting to {bluetoothDevice?.Name}");
         await Task.Run(() =>
         {
-            var bluetoothAddress = BluetoothAddress.Parse(bluetoothDevice?.Address);
+            /*var bluetoothAddress = BluetoothAddress.Parse(bluetoothDevice?.Address);
             var bluetoothEndPoint = new BluetoothEndPoint(bluetoothAddress, BluetoothService.SerialPort);
+            Client.Connect(bluetoothEndPoint);*/
 
-            Client.Connect(bluetoothEndPoint);
+            try
+            {
+                Client.Connect(bluetoothDevice?.Address, new Guid(DefaultGuid));
+                Console.WriteLine($"Successfully connected to {bluetoothDevice?.Name}");
+            }
+            catch (SocketException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
         });
-
-
     }
+
 
 
 
