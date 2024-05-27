@@ -5,9 +5,9 @@ namespace BluetoothConnect.Models;
 public class BluetoothDevice
 // Represents a Bluetooth device
 {
-    public string Type { get; set; } = null!;
-    public string Name { get; set; } = null!;
-    public BluetoothAddress Address { get; set; } = null!;
+    public string Type { get; set; }
+    public string Name { get; set; }
+    public BluetoothAddress Address { get; set; }
     public bool ConnectionStatus { get; set; }
 
 

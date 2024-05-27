@@ -2,7 +2,8 @@
 
 namespace BluetoothConnect.ViewModels;
 
-public class ConnectAirPodsViewModel: ViewModelBase
+public class AirPodsViewModel: ViewModelBase
 {
     public ConnectAirPodsCommand ConnectAirPodsCommand { get; } = new();
+    public SelectAirPodsCommand SelectAirPodsCommand { get; } = new();
 }

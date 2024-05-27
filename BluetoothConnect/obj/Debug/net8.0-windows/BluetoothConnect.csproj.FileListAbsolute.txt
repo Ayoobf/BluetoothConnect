@@ -28,3 +28,5 @@ C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\ConnectAirPodsView.baml
 C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\ConnectAirPodsView.g.cs
+C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\DeviceListView.g.cs
+C:\Users\rfloo\RiderProjects\BluetoothConnect\BluetoothConnect\obj\Debug\net8.0-windows\DeviceListView.baml

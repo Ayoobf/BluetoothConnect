@@ -1,0 +1,24 @@
+﻿<Window x:Class="BluetoothConnect.DeviceListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:viewModels="clr-namespace:BluetoothConnect.ViewModels"
+        mc:Ignorable="d"
+        Title="DeviceListView" Height="400" Width="450">
+    <StackPanel Orientation="Vertical" Margin="80 0 0 0 ">
+        <StackPanel.Resources>
+            <viewModels:DeviceListViewModel x:Key="DeviceListViewModel" />
+        </StackPanel.Resources>
+        <ItemsControl ItemsSource="{Binding BluetoothDevices ,Source={StaticResource DeviceListViewModel}}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Connect" Command="{Binding ConnectCommand, Source={StaticResource DeviceListViewModel}}"
+                                CommandParameter="{Binding}" Width="86" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Window>

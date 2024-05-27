@@ -1,7 +1,6 @@
 ﻿
 using System.Net.Sockets;
 using InTheHand.Net;
-using InTheHand.Net.Bluetooth;
 using InTheHand.Net.Sockets;
 
 namespace BluetoothConnect.Models;
@@ -12,7 +11,7 @@ public class BluetoothManager
     private static string DefaultGuid => "00001203-0000-1000-8000-00805F9B34FB";
     private static readonly BluetoothClient Client = new();
 
-    public async Task<List<BluetoothDevice>> GetAvailibleDevices()
+    public async Task<List<BluetoothDevice>> GetAvailableDevices()
     {
 
         return await Task.Run(() =>
@@ -40,7 +39,8 @@ public class BluetoothManager
         {
             /*var bluetoothAddress = BluetoothAddress.Parse(bluetoothDevice?.Address);
             var bluetoothEndPoint = new BluetoothEndPoint(bluetoothAddress, BluetoothService.SerialPort);
-            Client.Connect(bluetoothEndPoint);*/
+            Client.Connect(bluetoothEndPoint);#2#
+            */
 
             try
             {
