@@ -12,7 +12,12 @@
             <StackPanel.Resources>
                 <viewModels:HomePageViewModel x:Key="HomePageViewModel" />
             </StackPanel.Resources>
-            <TextBlock FontSize="25" FontFamily="Inter" FontWeight="SemiBold" Padding="64 24 0 0">Home</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="25" FontFamily="Inter" FontWeight="SemiBold" Padding="64 24 0 0">Home</TextBlock>
+                <Button Command="{Binding AddCommand, Source={StaticResource HomePageViewModel}}"
+                        FontFamily="Inter" Width="100" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" Margin="260 24 0 0"
+                        CommandParameter="{Binding}">Add New Device</Button>
+            </StackPanel>
 
             <!--Start here-->
             <StackPanel Orientation="Vertical" Margin="80 0 0 0 ">

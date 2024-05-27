@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BluetoothConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4aea445e61d0f2d283a5daa5f7879bd35ba3f5e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bae73ed410d7e49a60b29e76ed1e72df1b8523d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BluetoothConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BluetoothConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

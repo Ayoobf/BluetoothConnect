@@ -2,7 +2,6 @@
 using BluetoothConnect.Commands;
 using BluetoothConnect.Models;
 using BluetoothConnect.Services;
-using InTheHand.Net;
 
 namespace BluetoothConnect.ViewModels;
 
@@ -14,24 +13,19 @@ public class HomePageViewModel : ViewModelBase
     public IEnumerable<BluetoothDeviceViewModel> BluetoothDevices => _bluetoothDevices;
 
     public ConnectCommand ConnectCommand { get; }
+    public AddCommand AddCommand { get; }
 
     public HomePageViewModel()
     {
         _storageService = new BluetoothStorageService();
         _bluetoothDevices = new ObservableCollection<BluetoothDeviceViewModel>();
        ConnectCommand = new ConnectCommand(new BluetoothManager());
+       AddCommand = new AddCommand();
        InitializeAsync();
     }
 
     private async void InitializeAsync()
     {
-        var knownDevices = await _storageService.LoadKnownDevicesAsync();
-
-            foreach (var device in knownDevices!)
-            {
-                Console.WriteLine(device.Name);
-            }
-
 
         var bluetoothManager = new BluetoothManager();
         var newDevices = await bluetoothManager.GetAvailibleDevices();
@@ -39,7 +33,5 @@ public class HomePageViewModel : ViewModelBase
         {
             _bluetoothDevices.Add(new BluetoothDeviceViewModel(device));
         }
-
-        await _storageService.SaveKnownDevicesAsync(_bluetoothDevices);
     }
 }

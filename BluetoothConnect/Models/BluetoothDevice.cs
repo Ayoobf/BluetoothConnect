@@ -10,10 +10,6 @@ public class BluetoothDevice
     public BluetoothAddress Address { get; set; } = null!;
     public bool ConnectionStatus { get; set; }
 
-    public BluetoothDevice()
-    {
-
-    }
 
     public BluetoothDevice(string type, string name, BluetoothAddress address, bool connectionStatus)
     {

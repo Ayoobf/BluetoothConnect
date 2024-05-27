@@ -12,11 +12,6 @@ public class BluetoothDeviceViewModel: ViewModelBase
     public BluetoothAddress Address => _device.Address;
     public bool ConnectionStatus => _device.ConnectionStatus;
 
-    public BluetoothDeviceViewModel()
-    {
-        _device = new BluetoothDevice();
-    }
-
 
     public BluetoothDeviceViewModel(BluetoothDevice device)
     {

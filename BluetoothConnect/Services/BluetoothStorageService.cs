@@ -4,7 +4,7 @@ using System.Text.Json;
 using BluetoothConnect.ViewModels;
 
 namespace BluetoothConnect.Services;
-
+// TODO revamp
 public class BluetoothStorageService
 {
     private readonly string _filePath = "known_devices.json";
