@@ -1,4 +1,5 @@
-﻿using BluetoothConnect.ViewModels;
+﻿using BluetoothConnect.Service;
+using BluetoothConnect.ViewModels;
 
 namespace BluetoothConnect.Commands;
 
@@ -8,7 +9,8 @@ public class SetAirPodsCommand: CommandBase
     {
         if (parameter is BluetoothDeviceViewModel device)
         {
-            Console.WriteLine($"Selected {device.Name}");
+            SingletonAirPodStorage stb = new SingletonAirPodStorage(device);
+            stb.AddAirPod();
         }
     }
 }

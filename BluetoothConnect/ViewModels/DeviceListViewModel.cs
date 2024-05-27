@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using BluetoothConnect.Commands;
 using BluetoothConnect.Models;
-using InTheHand.Net;
 
 namespace BluetoothConnect.ViewModels;
 
