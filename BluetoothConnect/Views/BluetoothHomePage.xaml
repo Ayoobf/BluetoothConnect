@@ -13,7 +13,7 @@
                 <viewModels:HomePageViewModel x:Key="HomePageViewModel" />
             </StackPanel.Resources>
             <TextBlock FontSize="20" FontFamily="Inter" FontWeight="SemiBold" Padding="64 24 0 0">Home</TextBlock>
-            <ListView ItemsSource="{Binding BluetoothDevices ,Source={StaticResource HomePageViewModel}}" Margin="30 0 0 0" BorderBrush="#00000000">
+            <ListView ItemsSource="{Binding BluetoothDevices ,Source={StaticResource HomePageViewModel}}" Margin="30 0 0 0" BorderBrush="#00000000" SelectionMode="Extended">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -35,7 +35,8 @@
                             </GridViewColumn.HeaderTemplate>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock HorizontalAlignment="Center" Text="Hello" Padding="20 0 0 0" FontSize="16"></TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding Type}" Padding="20 0 0 0" FontSize="16"
+                                               d:DataContext="{d:DesignData BluetoothDeviceViewModel}"></TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
