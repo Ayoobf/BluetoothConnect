@@ -12,18 +12,46 @@
             <StackPanel.Resources>
                 <viewModels:HomePageViewModel x:Key="HomePageViewModel" />
             </StackPanel.Resources>
-            <TextBlock FontSize="20" FontFamily="Inter" FontWeight="SemiBold" Padding="64 24 0 0">Home</TextBlock>
-            <ListView ItemsSource="{Binding BluetoothDevices ,Source={StaticResource HomePageViewModel}}" Margin="30 0 0 0" BorderBrush="#00000000" SelectionMode="Extended">
+            <TextBlock FontSize="25" FontFamily="Inter" FontWeight="SemiBold" Padding="64 24 0 0">Home</TextBlock>
+
+            <!--Start here-->
+            <StackPanel Orientation="Vertical" Margin="80 0 0 0 ">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Type" FontSize="16" Width="70" Foreground="#828282" FontWeight="Medium" FontFamily="Inter" Margin="0 16 20 16"></TextBlock>
+                    <TextBlock Text="Device Name" FontSize="16" Width="522" FontWeight="Medium" FontFamily="Inter" Margin="0 16 0 16"></TextBlock>
+
+                </StackPanel>
+                <ItemsControl ItemsSource="{Binding BluetoothDevices ,Source={StaticResource HomePageViewModel}}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Type}" Foreground="#828282" Width="70" Height="24" FontSize="16" FontFamily="Inter" FontWeight="Medium" Margin="0 16 20 16"></TextBlock>
+                                <TextBlock Text="{Binding Name}" Width="522" Height="24" FontSize="16" FontFamily="Inter" FontWeight="Medium" Margin="0 16 490 16"></TextBlock>
+                                <!--<Button Content="Connect" Command="{Binding DataContext.ConnectCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                        CommandParameter="{Binding}" Width="86" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" Margin="5"/>-->
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+
+
+
+
+            <!--<ListView ItemsSource="{Binding BluetoothDevices ,Source={StaticResource HomePageViewModel}}" Margin="30 0 0 0" BorderBrush="#00000000" SelectionMode="Extended">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
                     </Style>
+
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView >
                         <GridViewColumn Header="Type" Width="100" >
                             <GridViewColumn.HeaderContainerStyle>
                                 <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="Focusable" Value="False"></Setter>
+                                    <Setter Property="IsHitTestVisible" Value="False"></Setter>
                                     <Setter Property="Background" Value="#00000000"></Setter>
                                     <Setter Property="BorderBrush" Value="#00000000"></Setter>
                                 </Style>
@@ -45,6 +73,8 @@
                         <GridViewColumn Header="Device Name" Width="300">
                             <GridViewColumn.HeaderContainerStyle>
                                 <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="Focusable" Value="False"></Setter>
+                                    <Setter Property="IsHitTestVisible" Value="False"></Setter>
                                     <Setter Property="Background" Value="#00000000"></Setter>
                                     <Setter Property="BorderBrush" Value="#00000000"></Setter>
                                     <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
@@ -67,6 +97,8 @@
                         <GridViewColumn Width="100">
                             <GridViewColumn.HeaderContainerStyle>
                                 <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="Focusable" Value="False"></Setter>
+                                    <Setter Property="IsHitTestVisible" Value="False"></Setter>
                                     <Setter Property="Background" Value="#00000000"></Setter>
                                     <Setter Property="BorderBrush" Value="#00000000"></Setter>
                                 </Style>
@@ -84,7 +116,7 @@
                     </GridView>
                 </ListView.View>
 
-            </ListView>
+            </ListView>-->
         </StackPanel>
 
     </Grid>
