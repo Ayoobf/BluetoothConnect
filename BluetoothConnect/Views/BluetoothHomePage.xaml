@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:BluetoothConnect.ViewModels"
              mc:Ignorable="d"
-             d:DesignHeight="1080" d:DesignWidth="1440">
+             d:DesignHeight="1080" d:DesignWidth="1440" d:DataContext="{d:DesignInstance viewModels:HomePageViewModel}">
     <Grid>
         <StackPanel>
             <TextBlock FontSize="20" FontFamily="Inter" FontWeight="SemiBold" Padding="64 24 0 0">Home</TextBlock>
-            <ListView ItemsSource="{Binding Devices}" SelectedItem="{Binding SelectedDevice}" Margin="30 0 0 0" BorderBrush="#00000000">
+            <ListView ItemsSource="{Binding}" SelectedItem="{Binding SelectedDevice}" Margin="30 0 0 0" BorderBrush="#00000000">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -16,7 +17,7 @@
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView >
-                        <GridViewColumn Header="Type" Width="100">
+                        <GridViewColumn Header="Type" Width="100" >
                             <GridViewColumn.HeaderContainerStyle>
                                 <Style TargetType="GridViewColumnHeader">
                                     <Setter Property="Background" Value="#00000000"></Setter>

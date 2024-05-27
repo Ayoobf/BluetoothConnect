@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Controls;
 using BluetoothConnect.Models;
 
@@ -9,6 +10,8 @@ public partial class BluetoothHomePage : UserControl
     public BluetoothHomePage()
     {
         InitializeComponent();
+        var devices = new ObservableCollection<string>();
+        devices.Add("Hello");
     }
 
     private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)

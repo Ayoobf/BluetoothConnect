@@ -1,24 +1,16 @@
-﻿
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿using System.Windows.Input;
 
 namespace BluetoothConnect.ViewModels;
 
-public class MainViewModel : INotifyPropertyChanged
-// handles business logic between ui and devices
+public class MainViewModel: ViewModelBase
 {
-    public event PropertyChangedEventHandler? PropertyChanged;
+    public ICommand HomeCommand { get; }
+    public ICommand AddDeviceCommand { get; }
+    public ICommand SettingsCommand { get; }
 
-    protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+    public MainViewModel()
     {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
     }
 
-    protected bool SetField<T>(ref T field, T value, [CallerMemberName] string? propertyName = null)
-    {
-        if (EqualityComparer<T>.Default.Equals(field, value)) return false;
-        field = value;
-        OnPropertyChanged(propertyName);
-        return true;
-    }
 }
