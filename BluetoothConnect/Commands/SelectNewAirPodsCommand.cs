@@ -1,4 +1,6 @@
-﻿namespace BluetoothConnect.Commands;
+﻿
+
+namespace BluetoothConnect.Commands;
 
 public class SelectNewAirPodsCommand: CommandBase
 {

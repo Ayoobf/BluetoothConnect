@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using BluetoothConnect.Commands;
 using BluetoothConnect.Models;
 
@@ -9,13 +10,17 @@ public class DeviceListViewModel: ViewModelBase
     private readonly ObservableCollection<BluetoothDeviceViewModel> _bluetoothDevices;
 
     public IEnumerable<BluetoothDeviceViewModel> BluetoothDevices => _bluetoothDevices;
-    public SetAirPodsCommand SetAirPodsCommand { get; } = new();
+    public SetAirPodsCommand SetAirPodsCommand { get; }
 
     public DeviceListViewModel()
     {
         _bluetoothDevices = new ObservableCollection<BluetoothDeviceViewModel>();
+        SetAirPodsCommand = new SetAirPodsCommand();
         InitializeAsync();
+
     }
+
+
 
     private async void InitializeAsync()
     {
