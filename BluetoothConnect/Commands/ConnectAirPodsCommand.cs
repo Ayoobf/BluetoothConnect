@@ -9,6 +9,6 @@ public class ConnectAirPodsCommand: CommandBase
     public override void Execute(object? parameter)
     {
         var airpodAddress = _stp.ReadAirPod();
-        new BluetoothManager().ConnectToDevice(airpodAddress);
+        _ = new BluetoothManager().ConnectToDevice(airpodAddress);
     }
 }
