@@ -11,8 +11,8 @@ public class SetAirPodsCommand: CommandBase
     {
         if (parameter is BluetoothDeviceViewModel device)
         {
-            SingletonAirPodStorage stb = new SingletonAirPodStorage(device);
-            stb.AddAirPod();
+            SingletonAirPodStorage stb = new SingletonAirPodStorage();
+            stb.AddAirPod(device);
 
             // Close on press
             var currentWindow = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
