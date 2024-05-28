@@ -1,5 +1,6 @@
 ﻿
 
+
 namespace BluetoothConnect.Commands;
 
 public class SelectNewAirPodsCommand: CommandBase
@@ -8,6 +9,7 @@ public class SelectNewAirPodsCommand: CommandBase
     {
         var deviceListWindow = new DeviceListView();
         deviceListWindow.Show();
+
     }
 
 }
