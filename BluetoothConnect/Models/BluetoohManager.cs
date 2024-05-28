@@ -32,24 +32,18 @@ public class BluetoothManager
         });
     }
 
-    public async Task ConnectToDevice(BluetoothDevice? bluetoothDevice)
+    public async Task ConnectToDevice(string deviceAddress)
     {
-        Console.WriteLine($"Connecting to {bluetoothDevice?.Name}");
         await Task.Run(() =>
         {
-            /*var bluetoothAddress = BluetoothAddress.Parse(bluetoothDevice?.Address);
-            var bluetoothEndPoint = new BluetoothEndPoint(bluetoothAddress, BluetoothService.SerialPort);
-            Client.Connect(bluetoothEndPoint);#2#
-            */
-
             try
             {
-                Client.Connect(bluetoothDevice?.Address, new Guid(DefaultGuid));
-                Console.WriteLine($"Successfully connected to {bluetoothDevice?.Name}");
+                Client.Connect(BluetoothAddress.Parse(deviceAddress), new Guid(DefaultGuid));
+                Console.WriteLine("Connected");
             }
             catch (SocketException e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Already Connected");
             }
             catch (Exception e)
             {
@@ -58,6 +52,8 @@ public class BluetoothManager
 
         });
     }
+
+
 
 
 

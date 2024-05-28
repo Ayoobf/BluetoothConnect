@@ -17,18 +17,28 @@ public class SingletonAirPodStorage
         File.WriteAllText(FilePath, json);
     }
 
-    public BluetoothDeviceViewModel? ReadAirPod()
+    public string ReadAirPod()
     {
-        string json = File.ReadAllText(FilePath);
-        BluetoothDeviceViewModel? retrievedDeviceViewModel = JsonSerializer.Deserialize<BluetoothDeviceViewModel>(json);
-        return retrievedDeviceViewModel;
-    }
+        try
+        {
+            string json = File.ReadAllText(FilePath);
+            using (JsonDocument doc = JsonDocument.Parse(json))
+            {
+                JsonElement root = doc.RootElement;
+                if (root.TryGetProperty("Address", out JsonElement addressElement))
+                {
+                    return addressElement.GetString()!;
+                }
 
-    public static void Test()
-    {
-        SingletonAirPodStorage stp = new SingletonAirPodStorage();
-        var ret = stp.ReadAirPod();
-        Console.WriteLine($"{ret?.Name} {ret?.ConnectionStatus} {ret?.Address}");
+                Console.WriteLine("Address Property not Found");
+                return string.Empty;
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return string.Empty;
+        }
     }
 
 

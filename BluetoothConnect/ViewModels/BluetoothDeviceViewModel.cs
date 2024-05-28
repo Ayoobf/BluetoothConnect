@@ -1,5 +1,4 @@
 ﻿using BluetoothConnect.Models;
-using InTheHand.Net;
 
 namespace BluetoothConnect.ViewModels;
 
@@ -9,7 +8,7 @@ public class BluetoothDeviceViewModel: ViewModelBase
 
     public string Type => _device.Type;
     public string Name => _device.Name;
-    public BluetoothAddress Address => _device.Address;
+    public string Address => _device.Address.ToString();
     public bool ConnectionStatus => _device.ConnectionStatus;
 
 

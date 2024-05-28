@@ -7,7 +7,7 @@ public class BluetoothDevice
 {
     public string Type { get; set; }
     public string Name { get; set; }
-    public BluetoothAddress Address { get; set; }
+    public string Address { get; set; }
     public bool ConnectionStatus { get; set; }
 
 
@@ -15,7 +15,7 @@ public class BluetoothDevice
     {
         Type = type;
         Name = name;
-        Address = address;
+        Address = address.ToString();
         ConnectionStatus = connectionStatus;
     }
 
