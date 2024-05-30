@@ -5,7 +5,13 @@
 
     <tb:TaskbarIcon x:Key="MyNotifyIcon"
                    IconSource="/Resources/AFLO.ico"
-                   ToolTipText="Hello World"
-    />
+                   ToolTipText="Hello World">
+        <tb:TaskbarIcon.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Open" Click="Open_Click"/>
+                <MenuItem Header="Exit" Click="Exit_Click"/>
+            </ContextMenu>
+        </tb:TaskbarIcon.ContextMenu>
+    </tb:TaskbarIcon>
 
 </ResourceDictionary>
