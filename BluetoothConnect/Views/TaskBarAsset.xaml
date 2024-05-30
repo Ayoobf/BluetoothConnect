@@ -8,6 +8,7 @@
                    ToolTipText="Hello World">
         <tb:TaskbarIcon.ContextMenu>
             <ContextMenu>
+
                 <MenuItem Header="Open" Name="OpenMenuItem"/>
                 <MenuItem Header="Exit" Name="ExitMenuItem"/>
             </ContextMenu>

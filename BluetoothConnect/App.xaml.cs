@@ -12,18 +12,15 @@ namespace BluetoothConnect;
 /// </summary>
 public partial class App
 {
-    private readonly TaskbarIcon? _tbIcon;
+    private TaskbarIcon? _tbIcon;
     private ConnectAirPodsView? _mainWindow;
-
-    public App()
-    {
-        _tbIcon = (TaskbarIcon) FindResource("MyNotifyIcon");
-    }
 
     private void App_OnStartup(object sender, StartupEventArgs e)
     {
         _mainWindow = new ConnectAirPodsView();
         _mainWindow.Show();
+
+        _tbIcon = (TaskbarIcon) FindResource("MyNotifyIcon");
 
         if (_tbIcon != null)
         {
