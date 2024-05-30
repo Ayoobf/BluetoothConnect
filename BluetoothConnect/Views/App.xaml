@@ -1,4 +1,4 @@
-﻿<Application x:Class="BluetoothConnect.App"
+﻿<Application x:Class="BluetoothConnect.Views.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:viewModels="clr-namespace:BluetoothConnect.ViewModels"

@@ -8,15 +8,18 @@
         Title=" "
         ResizeMode="CanMinimize"
         Height="200" Width="250">
-    <StackPanel Orientation="Vertical" Margin="0 0 0 0 ">
+    <StackPanel Orientation="Vertical" Margin="0 0 0 0 " x:Name="MainPanel">
         <StackPanel.Resources>
             <viewModels:DeviceListViewModel x:Key="DeviceListViewModel" />
         </StackPanel.Resources>
         <TextBlock FontSize="16" FontFamily="Sugoe" FontWeight="Medium" HorizontalAlignment="Center" Padding="5">Select AirPods</TextBlock>
+        <TextBlock FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" HorizontalAlignment="Center" Padding="5"
+                   Text="{Binding StatusText, Source={StaticResource DeviceListViewModel}}" />
         <ItemsControl ItemsSource="{Binding BluetoothDevices ,Source={StaticResource DeviceListViewModel}}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
+
                         <Button Content="{Binding Name}" Command="{Binding SetAirPodsCommand, Source={StaticResource DeviceListViewModel}}"
                                 CommandParameter="{Binding}" Width="250" Height="36" Background="#FFFFFF" BorderBrush="#E0E0E0" />
                     </StackPanel>

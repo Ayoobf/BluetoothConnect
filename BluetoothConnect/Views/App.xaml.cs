@@ -1,12 +1,11 @@
-﻿
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using BluetoothConnect.Commands;
-using BluetoothConnect.Views;
 using Hardcodet.Wpf.TaskbarNotification;
+
 // ReSharper disable AssignNullToNotNullAttribute
 
-namespace BluetoothConnect;
+namespace BluetoothConnect.Views;
 
 /// <summary>
 /// Interaction logic for App.xaml
@@ -40,8 +39,7 @@ public partial class App
 
     private void ConnectDeviceMenuItem_Click(object sender, RoutedEventArgs e)
     {
-        var connectAirPodsCommand = new ConnectAirPodsCommand();
-        connectAirPodsCommand.Execute(this);
+        new ConnectAirPodsCommand().Execute(this);
     }
 
     private void OpenMenueItem_Click(object sender, RoutedEventArgs e)
