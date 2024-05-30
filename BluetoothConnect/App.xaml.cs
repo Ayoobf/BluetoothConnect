@@ -1,6 +1,7 @@
 ﻿
 using System.Windows;
 using System.Windows.Controls;
+using BluetoothConnect.Commands;
 using BluetoothConnect.Views;
 using Hardcodet.Wpf.TaskbarNotification;
 // ReSharper disable AssignNullToNotNullAttribute
@@ -25,13 +26,22 @@ public partial class App
         if (_tbIcon != null)
         {
             _tbIcon.TrayLeftMouseDown += TrayLeftMouseDown;
+            if (_tbIcon.ContextMenu?.Items[0] is MenuItem connectDeviceMenuItem) connectDeviceMenuItem.Click += ConnectDeviceMenuItem_Click;
 
             if (_tbIcon.ContextMenu != null)
-                if (_tbIcon.ContextMenu.Items[0] is MenuItem openMenuItem)
+                if (_tbIcon.ContextMenu.Items[1] is MenuItem openMenuItem)
                     openMenuItem.Click += OpenMenueItem_Click;
 
-            if (_tbIcon.ContextMenu?.Items[1] is MenuItem exitMenuItem) exitMenuItem.Click += ExitMenueItem_Click;
+            if (_tbIcon.ContextMenu?.Items[2] is MenuItem exitMenuItem) exitMenuItem.Click += ExitMenueItem_Click;
+
+
         }
+    }
+
+    private void ConnectDeviceMenuItem_Click(object sender, RoutedEventArgs e)
+    {
+        var connectAirPodsCommand = new ConnectAirPodsCommand();
+        connectAirPodsCommand.Execute(this);
     }
 
     private void OpenMenueItem_Click(object sender, RoutedEventArgs e)
