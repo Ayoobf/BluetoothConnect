@@ -1,5 +1,7 @@
 ﻿
-namespace BluetoothConnect;
+using System.Windows;
+
+namespace BluetoothConnect.Views;
 
 public partial class TaskBarAsset
 {

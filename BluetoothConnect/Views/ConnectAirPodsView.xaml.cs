@@ -1,16 +1,16 @@
-﻿
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Windows;
 
-namespace BluetoothConnect;
+namespace BluetoothConnect.Views;
 
 public partial class ConnectAirPodsView
 {
     public ConnectAirPodsView()
     {
-        InitializeComponent();
+
         this.StateChanged += ConnectAirPodsView_StateChanged;
         this.Closing += ConnectAirPodsView_Closing;
+        InitializeComponent();
 
     }
 

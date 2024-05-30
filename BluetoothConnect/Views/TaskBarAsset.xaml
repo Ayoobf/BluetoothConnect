@@ -1,4 +1,4 @@
-﻿<ResourceDictionary x:Class="BluetoothConnect.TaskBarAsset"
+﻿<ResourceDictionary x:Class="BluetoothConnect.Views.TaskBarAsset"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:tb="http://www.hardcodet.net/taskbar">
@@ -8,8 +8,8 @@
                    ToolTipText="Hello World">
         <tb:TaskbarIcon.ContextMenu>
             <ContextMenu>
-                <MenuItem Header="Open" Click="Open_Click"/>
-                <MenuItem Header="Exit" Click="Exit_Click"/>
+                <MenuItem Header="Open" Name="OpenMenuItem"/>
+                <MenuItem Header="Exit" Name="ExitMenuItem"/>
             </ContextMenu>
         </tb:TaskbarIcon.ContextMenu>
     </tb:TaskbarIcon>
