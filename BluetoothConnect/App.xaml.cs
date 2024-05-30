@@ -12,6 +12,7 @@ public partial class App
 {
     private readonly BluetoothManager _btManager = new();
     private TaskbarIcon? _tbIcon;
+    private ConnectAirPodsView _mainWindow;
 
     private void App_OnStartup(object sender, StartupEventArgs e)
     {
@@ -19,12 +20,9 @@ public partial class App
         mainView.Show();
 
         _tbIcon = (TaskbarIcon) FindResource("MyNotifyIcon");
-
-
     }
 
-    private void App_OnExit(object sender, ExitEventArgs e)
-    {
-        _tbIcon.Dispose();
-    }
+
+
+
 }

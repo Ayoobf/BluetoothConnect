@@ -14,14 +14,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Page Update="ConnectAirPodsView.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </Page>
-    </ItemGroup>
-
-    <ItemGroup>
       <None Remove="Assets\Airpods-Pro-PNG-Cutout.png" />
       <Resource Include="Resources\Airpods-Pro-PNG-Cutout.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -31,7 +23,21 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Views\" />
+      <Page Update="Views\ConnectAirPodsView.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Views\DeviceListView.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Views\TaskBarAsset.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
     </ItemGroup>
 
 </Project>

@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:viewModels="clr-namespace:BluetoothConnect.ViewModels"
              Startup="App_OnStartup"
-             Exit="App_OnExit">
+             >
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/BluetoothConnect;component/TaskBarAsset.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Views/TaskBarAsset.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <Style x:Key="Header" TargetType="TextBlock" />
             <viewModels:AirPodsViewModel x:Key="ConnectAirpodsViewModel" />
