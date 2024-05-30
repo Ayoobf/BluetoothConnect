@@ -1,5 +1,4 @@
 ﻿
-using System.Net.Sockets;
 using InTheHand.Net;
 using InTheHand.Net.Sockets;
 
@@ -36,18 +35,15 @@ public class BluetoothManager
     {
         await Task.Run(() =>
         {
+
             try
             {
                 Client.Connect(BluetoothAddress.Parse(deviceAddress), new Guid(DefaultGuid));
-                Console.WriteLine("Connected");
-            }
-            catch (SocketException e)
-            {
-                Console.WriteLine("Already Connected");
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(e);
+                throw;
             }
 
         });

@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <PackageReference Include="32feet.NET" Version="3.5.0.3" />
+      <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -25,6 +26,8 @@
       <Resource Include="Resources\Airpods-Pro-PNG-Cutout.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Resource>
+      <None Remove="Resources\AFLO.ico" />
+      <Resource Include="Resources\AFLO.ico" />
     </ItemGroup>
 
     <ItemGroup>

@@ -5,10 +5,11 @@ namespace BluetoothConnect.Commands;
 
 public class ConnectAirPodsCommand: CommandBase
 {
-    private readonly SingletonAirPodStorage _stp = new SingletonAirPodStorage();
+    private readonly SingletonAirPodStorage _stp = new();
     public override void Execute(object? parameter)
     {
-        var airpodAddress = _stp.ReadAirPod();
-        _ = new BluetoothManager().ConnectToDevice(airpodAddress);
+        var airPodAddress = _stp.ReadAirPod();
+        _  = new BluetoothManager().ConnectToDevice(airPodAddress);
+
     }
 }

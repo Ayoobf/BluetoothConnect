@@ -1,18 +1,30 @@
 ﻿
 using System.Windows;
 using BluetoothConnect.Models;
+using Hardcodet.Wpf.TaskbarNotification;
 
 namespace BluetoothConnect;
 
 /// <summary>
 /// Interaction logic for App.xaml
 /// </summary>
-public partial class App : Application
+public partial class App
 {
-    private readonly BluetoothManager _btManager;
+    private readonly BluetoothManager _btManager = new();
+    private TaskbarIcon? _tbIcon;
 
-    public App()
+    private void App_OnStartup(object sender, StartupEventArgs e)
     {
-        _btManager = new BluetoothManager();
+        ConnectAirPodsView mainView = new ConnectAirPodsView();
+        mainView.Show();
+
+        _tbIcon = (TaskbarIcon) FindResource("MyNotifyIcon");
+
+
+    }
+
+    private void App_OnExit(object sender, ExitEventArgs e)
+    {
+        _tbIcon.Dispose();
     }
 }

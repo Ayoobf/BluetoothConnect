@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mEPfcN2OSTxyjJR2TemvFeK1R/0iIAVfI9OYJnHFVbHd4J0F+oDA6OPh38yHb0fFtwy8RUZwszY17QVtIOetSQ==",
+  "dgSpecHash": "j/Hsvb/AGlceFD0DRV+YtrQ/Kxu4ajYUTkiJJ7dufO2cxkLDykOy2SdVBwQ7ka8+oOW0l+1PRdsOCPftW4Zz8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\rfloo\\RiderProjects\\BluetoothConnect\\BluetoothConnect\\BluetoothConnect.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rfloo\\.nuget\\packages\\32feet.net\\3.5.0.3\\32feet.net.3.5.0.3.nupkg.sha512"
+    "C:\\Users\\rfloo\\.nuget\\packages\\32feet.net\\3.5.0.3\\32feet.net.3.5.0.3.nupkg.sha512",
+    "C:\\Users\\rfloo\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512"
   ],
   "logs": [
     {
